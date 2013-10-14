@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- ==================== AttributeCategory ==================== -->
+		
+	<bean id="AttributeCategory_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeCategory_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.AttributeCategory"/>
+	</bean>
+	
+	<!-- ==================== AttributeCategoryLov ==================== -->
+		
+	<bean id="AttributeCategoryLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeCategoryLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.AttributeCategory"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== AttributeSet ==================== -->
+		
+	<bean id="AttributeSet_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeSet_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.AttributeSet"/>
+		<property name="paramClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeSet_DsParam"/>
+		<property name="rpcData" >
+			<map>
+				<entry key="createDefaultSubSet">
+					<bean class="net.nan21.dnet.core.presenter.descriptor.RpcDefinition">
+						<constructor-arg name="delegateClass" value="net.nan21.dnet.module.bd.presenter.ext.attr.delegate.Attribute_Pd"/>
+						<constructor-arg name="methodName" value="createDefaultSubSet" />
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+	<!-- ==================== AttributeSetLov ==================== -->
+		
+	<bean id="AttributeSetLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeSetLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.AttributeSet"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== AttributeSubSet ==================== -->
+		
+	<bean id="AttributeSubSet_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeSubSet_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.AttributeSubSet"/>
+	</bean>
+	
+	<!-- ==================== AttributeSubSetLov ==================== -->
+		
+	<bean id="AttributeSubSetLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeSubSetLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.AttributeSubSet"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== Attribute ==================== -->
+		
+	<bean id="Attribute_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.Attribute_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.Attribute"/>
+	</bean>
+	
+	<!-- ==================== AttributeLov ==================== -->
+		
+	<bean id="AttributeLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.Attribute"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== AttributeSetAttribute ==================== -->
+		
+	<bean id="AttributeSetAttribute_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeSetAttribute_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.AttributeSetAttribute"/>
+	</bean>
+	
+	<!-- ==================== AttributeValue ==================== -->
+		
+	<bean id="AttributeValue_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeValue_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.AttributeValue"/>
+		<property name="rpcFilter" >
+			<map>
+				<entry key="synchronizeAttributes">
+					<bean class="net.nan21.dnet.core.presenter.descriptor.RpcDefinition">
+						<constructor-arg name="delegateClass" value="net.nan21.dnet.module.bd.presenter.ext.attr.delegate.Attribute_Pd"/>
+						<constructor-arg name="methodName" value="synchronizeAttributes" />
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="AttributeCategory" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.attr.AttributeCategory_Service"/>				
+
+	<bean id="Attribute" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.attr.Attribute_Service"/>				
+
+	<bean id="AttributeSet" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.attr.AttributeSet_Service"/>				
+
+	<bean id="AttributeSubSet" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.attr.AttributeSubSet_Service"/>				
+
+	<bean id="AttributeSetAttribute" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.attr.AttributeSetAttribute_Service"/>				
+
+	<bean id="AttributeValue" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.attr.AttributeValue_Service"/>				
+</beans>

@@ -1,0 +1,61 @@
+/**
+ * DNet eBusiness Suite
+ * Copyright: 2010-2013 Nan21 Electronics SRL. All rights reserved.
+ * Use is subject to license terms.
+ */
+package net.nan21.dnet.module.bd.presenter.impl.geo.model;
+
+import net.nan21.dnet.core.api.annotation.Ds;
+import net.nan21.dnet.core.api.annotation.DsField;
+import net.nan21.dnet.core.api.annotation.SortField;
+import net.nan21.dnet.core.presenter.model.AbstractTypeWithCodeDs;
+import net.nan21.dnet.module.bd.domain.impl.geo.Country;
+
+@Ds(entity = Country.class, sort = {@SortField(field = Country_Ds.f_code)})
+public class Country_Ds extends AbstractTypeWithCodeDs<Country> {
+
+	public static final String f_iso2 = "iso2";
+	public static final String f_iso3 = "iso3";
+	public static final String f_hasRegions = "hasRegions";
+
+	@DsField
+	private String iso2;
+
+	@DsField
+	private String iso3;
+
+	@DsField
+	private Boolean hasRegions;
+
+	public Country_Ds() {
+		super();
+	}
+
+	public Country_Ds(Country e) {
+		super(e);
+	}
+
+	public String getIso2() {
+		return this.iso2;
+	}
+
+	public void setIso2(String iso2) {
+		this.iso2 = iso2;
+	}
+
+	public String getIso3() {
+		return this.iso3;
+	}
+
+	public void setIso3(String iso3) {
+		this.iso3 = iso3;
+	}
+
+	public Boolean getHasRegions() {
+		return this.hasRegions;
+	}
+
+	public void setHasRegions(Boolean hasRegions) {
+		this.hasRegions = hasRegions;
+	}
+}

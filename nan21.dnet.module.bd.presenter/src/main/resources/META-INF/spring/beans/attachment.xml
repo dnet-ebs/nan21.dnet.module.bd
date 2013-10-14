@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- ==================== AttachmentType ==================== -->
+		
+	<bean id="AttachmentType_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attachment.model.AttachmentType_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attachment.AttachmentType"/>
+	</bean>
+	
+	<!-- ==================== AttachmentTypeLov ==================== -->
+		
+	<bean id="AttachmentTypeLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attachment.model.AttachmentTypeLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attachment.AttachmentType"/>
+		<property name="queryBuilderClass" value="net.nan21.dnet.module.bd.presenter.impl.attachment.qb.AttachmentTypeLov_DsQb" />
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== Attachment ==================== -->
+		
+	<bean id="Attachment_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attachment.model.Attachment_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attachment.Attachment"/>
+	</bean>
+</beans>

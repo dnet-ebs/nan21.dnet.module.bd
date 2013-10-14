@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="Engine" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.elem.Engine_Service"/>				
+
+	<bean id="ElementCategory" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.elem.ElementCategory_Service"/>				
+
+	<bean id="ElementType" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.elem.ElementType_Service"/>				
+
+	<bean id="Element" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.elem.Element_Service"/>				
+
+	<bean id="ElementInput" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.elem.ElementInput_Service"/>				
+
+	<bean id="ElementFormula" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.elem.ElementFormula_Service"/>				
+
+	<bean id="ElementSet" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.elem.ElementSet_Service"/>				
+
+	<bean id="ElementSetElement" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.elem.ElementSetElement_Service"/>				
+</beans>

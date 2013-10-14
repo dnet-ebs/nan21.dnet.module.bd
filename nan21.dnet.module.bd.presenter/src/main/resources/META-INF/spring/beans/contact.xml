@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- ==================== CommunicationMethodType ==================== -->
+		
+	<bean id="CommunicationMethodType_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.contact.model.CommunicationMethodType_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.contact.CommunicationMethodType"/>
+	</bean>
+	
+	<!-- ==================== CommunicationMethodTypeAllLov ==================== -->
+		
+	<bean id="CommunicationMethodTypeAllLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.contact.model.CommunicationMethodTypeAllLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.contact.CommunicationMethodType"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== CommunicationMethodTypeLov ==================== -->
+		
+	<bean id="CommunicationMethodTypeLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.contact.model.CommunicationMethodTypeLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.contact.CommunicationMethodType"/>
+		<property name="queryBuilderClass" value="net.nan21.dnet.module.bd.presenter.impl.contact.qb.CommunicationMethodTypeLov_DsQb" />
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== CommunicationMethod ==================== -->
+		
+	<bean id="CommunicationMethod_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.contact.model.CommunicationMethod_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.contact.CommunicationMethod"/>
+	</bean>
+</beans>

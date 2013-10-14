@@ -1,0 +1,5 @@
+[
+	"nan21.dnet.module.bd.ui.extjs/ds/CurrencyXRate_Ds", 
+	"nan21.dnet.module.bd.ui.extjs/lov/Currencies_Lov", 
+	"nan21.dnet.module.bd.ui.extjs/lov/CurrencyXRateProviders_Lov"
+]

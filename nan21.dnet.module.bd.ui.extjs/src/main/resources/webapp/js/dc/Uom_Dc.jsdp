@@ -1,0 +1,5 @@
+[
+	"nan21.dnet.module.bd.ui.extjs/ds/Uom_Ds", 
+	"nan21.dnet.module.bd.ui.extjs/lov/UomTypes_Lov", 
+	"nan21.dnet.module.bd.ui.extjs/lov/Uoms_Lov"
+]

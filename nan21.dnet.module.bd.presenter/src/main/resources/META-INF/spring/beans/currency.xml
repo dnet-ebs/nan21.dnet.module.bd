@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- ==================== Currency ==================== -->
+		
+	<bean id="Currency_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.currency.model.Currency_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.currency.Currency"/>
+	</bean>
+	
+	<!-- ==================== CurrencyLov ==================== -->
+		
+	<bean id="CurrencyLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.currency.model.CurrencyLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.currency.Currency"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== CurrencyXRateProvider ==================== -->
+		
+	<bean id="CurrencyXRateProvider_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.currency.model.CurrencyXRateProvider_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.currency.CurrencyXRateProvider"/>
+	</bean>
+	
+	<!-- ==================== CurrencyXRateProviderLov ==================== -->
+		
+	<bean id="CurrencyXRateProviderLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.currency.model.CurrencyXRateProviderLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.currency.CurrencyXRateProvider"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== CurrencyXRate ==================== -->
+		
+	<bean id="CurrencyXRate_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.currency.model.CurrencyXRate_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.currency.CurrencyXRate"/>
+	</bean>
+	
+	<!-- ==================== CurrencyXRateAverage ==================== -->
+		
+	<bean id="CurrencyXRateAverage_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.currency.model.CurrencyXRateAverage_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.currency.CurrencyXRateAverage"/>
+	</bean>
+</beans>

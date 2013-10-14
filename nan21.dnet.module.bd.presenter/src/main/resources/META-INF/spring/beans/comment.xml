@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- ==================== CommentType ==================== -->
+		
+	<bean id="CommentType_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.comment.model.CommentType_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.comment.CommentType"/>
+	</bean>
+	
+	<!-- ==================== CommentTypeLov ==================== -->
+		
+	<bean id="CommentTypeLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.comment.model.CommentTypeLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.comment.CommentType"/>
+	</bean>
+	
+	<!-- ==================== Comment ==================== -->
+		
+	<bean id="Comment_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.comment.model.Comment_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.comment.Comment"/>
+	</bean>
+</beans>

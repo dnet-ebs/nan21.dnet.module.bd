@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- ==================== Country ==================== -->
+		
+	<bean id="Country_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.geo.model.Country_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.geo.Country"/>
+	</bean>
+	
+	<!-- ==================== CountryLov ==================== -->
+		
+	<bean id="CountryLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.geo.model.CountryLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.geo.Country"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== Region ==================== -->
+		
+	<bean id="Region_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.geo.model.Region_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.geo.Region"/>
+	</bean>
+	
+	<!-- ==================== RegionLov ==================== -->
+		
+	<bean id="RegionLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.geo.model.RegionLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.geo.Region"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== City ==================== -->
+		
+	<bean id="City_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.geo.model.City_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.geo.City"/>
+	</bean>
+	
+	<!-- ==================== Location ==================== -->
+		
+	<bean id="Location_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.geo.model.Location_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.geo.Location"/>
+	</bean>
+	
+	<!-- ==================== LocationLov ==================== -->
+		
+	<bean id="LocationLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.geo.model.LocationLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.geo.Location"/>
+		<property name="readOnly" value="true" />
+	</bean>
+</beans>

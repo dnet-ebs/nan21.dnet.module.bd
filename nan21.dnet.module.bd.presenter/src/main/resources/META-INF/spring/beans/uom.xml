@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- ==================== UomType ==================== -->
+		
+	<bean id="UomType_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.uom.model.UomType_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.uom.UomType"/>
+	</bean>
+	
+	<!-- ==================== UomTypeLov ==================== -->
+		
+	<bean id="UomTypeLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.uom.model.UomTypeLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.uom.UomType"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== Uom ==================== -->
+		
+	<bean id="Uom_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.uom.model.Uom_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.uom.Uom"/>
+	</bean>
+	
+	<!-- ==================== UomLov ==================== -->
+		
+	<bean id="UomLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.uom.model.UomLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.uom.Uom"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== UomMassLov ==================== -->
+		
+	<bean id="UomMassLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.uom.model.UomMassLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.uom.Uom"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== UomLengthLov ==================== -->
+		
+	<bean id="UomLengthLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.uom.model.UomLengthLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.uom.Uom"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== UomVolumeLov ==================== -->
+		
+	<bean id="UomVolumeLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.uom.model.UomVolumeLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.uom.Uom"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
+	<!-- ==================== UomConversion ==================== -->
+		
+	<bean id="UomConversion_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.uom.model.UomConversion_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.uom.UomConversion"/>
+	</bean>
+</beans>
