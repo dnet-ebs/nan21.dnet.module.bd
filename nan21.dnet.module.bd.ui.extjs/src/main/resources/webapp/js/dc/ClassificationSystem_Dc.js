@@ -22,7 +22,7 @@ Ext.define(Dnet.ns.bd + "ClassificationSystem_Dc$Filter" , {
 		
 		/* =========== controls =========== */
 		.addTextField({ name:"name", dataIndex:"name"})
-		.addLov({xtype:"bd_ClassificationSystemsAll_Lov", name:"code", dataIndex:"code", caseRestriction:"uppercase",
+		.addLov({name:"code", dataIndex:"code", xtype:"bd_ClassificationSystemsAll_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "id"} ]})
 		.addBooleanField({ name:"active", dataIndex:"active"})
 		.addBooleanField({ name:"internal", dataIndex:"internal"})

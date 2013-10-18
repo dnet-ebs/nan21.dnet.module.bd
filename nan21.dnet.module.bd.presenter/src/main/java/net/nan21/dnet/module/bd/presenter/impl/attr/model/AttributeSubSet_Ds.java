@@ -24,6 +24,7 @@ public class AttributeSubSet_Ds extends AbstractTypeWithCodeDs<AttributeSubSet> 
 	public static final String f_sequenceNo = "sequenceNo";
 	public static final String f_attributeSetId = "attributeSetId";
 	public static final String f_attributeSet = "attributeSet";
+	public static final String f_attributeSetName = "attributeSetName";
 
 	@DsField
 	private Integer sequenceNo;
@@ -33,6 +34,9 @@ public class AttributeSubSet_Ds extends AbstractTypeWithCodeDs<AttributeSubSet> 
 
 	@DsField(join = "left", path = "attributeSet.code")
 	private String attributeSet;
+
+	@DsField(join = "left", path = "attributeSet.name")
+	private String attributeSetName;
 
 	public AttributeSubSet_Ds() {
 		super();
@@ -64,5 +68,13 @@ public class AttributeSubSet_Ds extends AbstractTypeWithCodeDs<AttributeSubSet> 
 
 	public void setAttributeSet(String attributeSet) {
 		this.attributeSet = attributeSet;
+	}
+
+	public String getAttributeSetName() {
+		return this.attributeSetName;
+	}
+
+	public void setAttributeSetName(String attributeSetName) {
+		this.attributeSetName = attributeSetName;
 	}
 }

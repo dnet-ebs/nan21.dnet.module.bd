@@ -21,7 +21,7 @@ Ext.define(Dnet.ns.bd + "CommunicationMethodType_Dc$Filter" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_CommunicationMethodTypes_Lov", name:"name", dataIndex:"name",
+		.addLov({name:"name", dataIndex:"name", xtype:"bd_CommunicationMethodTypes_Lov",
 			retFieldMapping: [{lovField:"id", dsField: "id"} ]})
 		.addCombo({ xtype:"combo", name:"type", dataIndex:"type", store:[ "email", "messenger", "phone", "url", "other"]})
 		.addBooleanField({ name:"active", dataIndex:"active"})

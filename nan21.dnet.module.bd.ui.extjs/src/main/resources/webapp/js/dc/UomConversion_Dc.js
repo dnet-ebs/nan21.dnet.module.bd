@@ -21,9 +21,9 @@ Ext.define(Dnet.ns.bd + "UomConversion_Dc$Filter" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_Uoms_Lov", name:"source", dataIndex:"source", caseRestriction:"uppercase",
+		.addLov({name:"source", dataIndex:"source", xtype:"bd_Uoms_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "sourceId"} ]})
-		.addLov({xtype:"bd_Uoms_Lov", name:"target", dataIndex:"target", caseRestriction:"uppercase",
+		.addLov({name:"target", dataIndex:"target", xtype:"bd_Uoms_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "targetId"} ]})
 		.addBooleanField({ name:"active", dataIndex:"active"})
 		

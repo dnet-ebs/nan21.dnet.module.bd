@@ -21,7 +21,7 @@ Ext.define(Dnet.ns.bd + "Country_Dc$Filter" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_Countries_Lov", name:"code", dataIndex:"code", caseRestriction:"uppercase",
+		.addLov({name:"code", dataIndex:"code", xtype:"bd_Countries_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "id"} ]})
 		.addTextField({ name:"name", dataIndex:"name"})
 		.addTextField({ name:"iso2", dataIndex:"iso2", maxLength:2, caseRestriction:"uppercase"})

@@ -21,13 +21,13 @@ Ext.define(Dnet.ns.bd + "Attribute_Dc$Filter" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_Attributes_Lov", name:"code", dataIndex:"code", caseRestriction:"uppercase",
+		.addLov({name:"code", dataIndex:"code", xtype:"bd_Attributes_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "id"} ]})
 		.addTextField({ name:"name", dataIndex:"name"})
 		.addBooleanField({ name:"active", dataIndex:"active"})
-		.addLov({xtype:"bd_AttributeCategories_Lov", name:"category", dataIndex:"category", caseRestriction:"uppercase",
+		.addLov({name:"category", dataIndex:"category", xtype:"bd_AttributeCategories_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "categoryId"} ]})
-		.addLov({xtype:"bd_Uoms_Lov", name:"uom", dataIndex:"uom", caseRestriction:"uppercase",
+		.addLov({name:"uom", dataIndex:"uom", xtype:"bd_Uoms_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "uomId"} ]})
 		.addCombo({ xtype:"combo", name:"dataType", dataIndex:"dataType", store:[ "string", "text", "integer", "decimal", "boolean", "date"]})
 		

@@ -15,7 +15,8 @@ Ext.define(Dnet.ns.bd + "AttributeSets_Lov" , {
 	},
 	_editDialog_: {
 		name: "AttributeSet_Ui",
-		bundle: Dnet.bundle.bd
+		bundle: Dnet.bundle.bd,
+		tocElement: "canvasSet"
 	},
 	recordModel: Dnet.ns.bd + "AttributeSetLov_Ds"
 });

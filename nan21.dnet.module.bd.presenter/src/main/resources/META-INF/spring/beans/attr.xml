@@ -94,6 +94,15 @@
 		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.AttributeSetAttribute"/>
 	</bean>
 	
+	<!-- ==================== AttributeSetAttributeLov ==================== -->
+		
+	<bean id="AttributeSetAttributeLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.attr.model.AttributeSetAttributeLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.attr.AttributeSetAttribute"/>
+		<property name="readOnly" value="true" />
+	</bean>
+	
 	<!-- ==================== AttributeValue ==================== -->
 		
 	<bean id="AttributeValue_Ds" scope="singleton" lazy-init="true"

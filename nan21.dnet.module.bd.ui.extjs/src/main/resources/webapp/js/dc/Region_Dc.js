@@ -21,9 +21,9 @@ Ext.define(Dnet.ns.bd + "Region_Dc$Filter" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_Countries_Lov", name:"country", dataIndex:"country", caseRestriction:"uppercase",
+		.addLov({name:"country", dataIndex:"country", xtype:"bd_Countries_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "countryId"} ]})
-		.addLov({xtype:"bd_Regions_Lov", name:"code", dataIndex:"code", caseRestriction:"uppercase",
+		.addLov({name:"code", dataIndex:"code", xtype:"bd_Regions_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "id"} ]})
 		.addTextField({ name:"name", dataIndex:"name"})
 		.addTextField({ name:"iso", dataIndex:"iso", maxLength:32, caseRestriction:"uppercase"})
@@ -136,7 +136,7 @@ Ext.define(Dnet.ns.bd + "Region_Dc$Edit" , {
 		.addTextArea({ name:"notes", dataIndex:"notes", height:60})
 		.addTextField({ name:"iso", dataIndex:"iso", maxLength:32, caseRestriction:"uppercase"})
 		.addBooleanField({ name:"active", dataIndex:"active"})
-		.addLov({xtype:"bd_Countries_Lov", name:"country", dataIndex:"country", allowBlank:false, caseRestriction:"uppercase",
+		.addLov({name:"country", dataIndex:"country", allowBlank:false, xtype:"bd_Countries_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "countryId"} ]})
 		
 		/* =========== containers =========== */

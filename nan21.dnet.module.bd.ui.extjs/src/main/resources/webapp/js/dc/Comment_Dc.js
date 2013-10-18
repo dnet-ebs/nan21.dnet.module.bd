@@ -72,10 +72,10 @@ Ext.define(Dnet.ns.bd + "Comment_Dc$Edit" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_CommentTypes_Lov", name:"type", dataIndex:"type",
+		.addLov({name:"type", dataIndex:"type", xtype:"bd_CommentTypes_Lov",
 			retFieldMapping: [{lovField:"id", dsField: "typeId"} ],
 			filterFieldMapping: [{lovField:"targetType", dsField: "targetType"}, {lovField:"targetFqn", dsField: "targetFqn"} ]})
-		.addTextArea({ name:"text", dataIndex:"text", _enableFn_: function(dc , rec) { return  rec.phantom || ( rec.data.createdBy == getApplication().getSession().user.code); } , allowBlank:false})
+		.addTextArea({ name:"text", dataIndex:"text", _enableFn_: function(dc, rec) { return  rec.phantom || ( rec.data.createdBy == getApplication().getSession().user.code); } , allowBlank:false})
 		
 		/* =========== containers =========== */
 		.addPanel({ name:"main", autoScroll:true, layout:"fit", defaults:{labelAlign:"right"}});

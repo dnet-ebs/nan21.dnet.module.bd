@@ -21,9 +21,9 @@ Ext.define(Dnet.ns.bd + "Location_Dc$Filter" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_Countries_Lov", name:"country", dataIndex:"country", caseRestriction:"uppercase",
+		.addLov({name:"country", dataIndex:"country", xtype:"bd_Countries_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "countryId"} ]})
-		.addLov({xtype:"bd_Regions_Lov", name:"region", dataIndex:"region", caseRestriction:"uppercase",
+		.addLov({name:"region", dataIndex:"region", xtype:"bd_Regions_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "regionId"} ],
 			filterFieldMapping: [{lovField:"countryId", dsField: "countryId"} ]})
 		.addTextField({ name:"cityName", dataIndex:"cityName"})
@@ -90,10 +90,10 @@ Ext.define(Dnet.ns.bd + "Location_Dc$EditCtx" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_Countries_Lov", name:"country", dataIndex:"country", allowBlank:false, caseRestriction:"uppercase",
+		.addLov({name:"country", dataIndex:"country", allowBlank:false, xtype:"bd_Countries_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "countryId"} ],
 			filterFieldMapping: [{lovField:"active", value: "true"} ]})
-		.addLov({xtype:"bd_Regions_Lov", name:"region", dataIndex:"region", caseRestriction:"uppercase",
+		.addLov({name:"region", dataIndex:"region", xtype:"bd_Regions_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "regionId"} ],
 			filterFieldMapping: [{lovField:"countryId", dsField: "countryId"} ]})
 		.addTextField({ name:"cityName", dataIndex:"cityName"})

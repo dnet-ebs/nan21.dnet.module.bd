@@ -9,24 +9,40 @@ Ext.define(Dnet.ns.bd + "AttributeSet_Dc" , {
 	recordModel: Dnet.ns.bd + "AttributeSet_Ds"
 });
 
-/* ================= FILTER: Filter ================= */
-
+/* ================= FILTER FORM: Filter ================= */			
 
 Ext.define(Dnet.ns.bd + "AttributeSet_Dc$Filter" , {
-	extend: "dnet.core.dc.view.AbstractDcvFilterPropGrid",
+	extend: "dnet.core.dc.view.AbstractDcvFilterForm",
 	alias: "widget.bd_AttributeSet_Dc$Filter",
 
+	/**
+	 * Components definition
+	 */	
 	_defineElements_: function() {
 		this._getBuilder_()
-			/* controls */
-			.addLov({xtype:"bd_AttributeSets_Lov", name:"code", dataIndex:"code", caseRestriction:"uppercase",
-				editor:{_fqn_:Dnet.ns.bd + "AttributeSets_Lov" , selectOnFocus:true, caseRestriction:"uppercase",
-					retFieldMapping: [{lovField:"id", dsField: "id"} ]}})
-			.addTextField({ name:"name", dataIndex:"name"})
-			.addBooleanField({ name:"active", dataIndex:"active"})
-		;
-	}
+		
+		/* =========== controls =========== */
+		.addLov({name:"code", dataIndex:"code", xtype:"bd_AttributeSets_Lov", caseRestriction:"uppercase",
+			retFieldMapping: [{lovField:"id", dsField: "id"} ]})
+		.addTextField({ name:"name", dataIndex:"name"})
+		.addBooleanField({ name:"active", dataIndex:"active"})
+		
+		/* =========== containers =========== */
+		.addPanel({ name:"main", autoScroll:true, layout: {type:"hbox", align:'top', pack:'start', defaultMargins: {right:5, left:5}},
+		autoScroll:true, padding:"0 30 5 0"})
+		.addPanel({ name:"col1", width:250, layout:"form"})
+		.addPanel({ name:"col2", width:170, layout:"form"});
+	},
 
+	/**
+	 * Combine the components
+	 */				
+	_linkElements_: function() {
+		this._getBuilder_()
+		.addChildrenTo("main", ["col1", "col2"])
+		.addChildrenTo("col1", ["code", "name"])
+		.addChildrenTo("col2", ["active"]);
+	}
 });
 
 /* ================= EDIT-GRID: EditList ================= */

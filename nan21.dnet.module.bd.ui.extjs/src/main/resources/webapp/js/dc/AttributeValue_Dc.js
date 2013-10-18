@@ -20,10 +20,12 @@ Ext.define(Dnet.ns.bd + "AttributeValue_Dc$CtxFilter" , {
 			/* controls */
 			.addLov({xtype:"bd_AttributeSubSets_Lov", name:"subSet", dataIndex:"subSet", caseRestriction:"uppercase",
 				editor:{_fqn_:Dnet.ns.bd + "AttributeSubSets_Lov" , selectOnFocus:true, caseRestriction:"uppercase",
-					retFieldMapping: [{lovField:"id", dsField: "subSetId"} ]}})
-			.addLov({xtype:"bd_Attributes_Lov", name:"attribute", dataIndex:"attribute", caseRestriction:"uppercase",
-				editor:{_fqn_:Dnet.ns.bd + "Attributes_Lov" , selectOnFocus:true, caseRestriction:"uppercase",
-					retFieldMapping: [{lovField:"id", dsField: "attributeId"} ]}})
+					retFieldMapping: [{lovField:"id", dsField: "subSetId"} ],
+					filterFieldMapping: [{lovField:"attributeSetId", dsField: "attributeSetId"} ]}})
+			.addLov({xtype:"bd_AttributeSetAttributes_Lov", name:"attribute", dataIndex:"attribute", caseRestriction:"uppercase",
+				editor:{_fqn_:Dnet.ns.bd + "AttributeSetAttributes_Lov" , selectOnFocus:true, caseRestriction:"uppercase",
+					retFieldMapping: [{lovField:"attributeId", dsField: "attributeId"} ],
+					filterFieldMapping: [{lovField:"attributeSetId", dsField: "attributeSetId"} ]}})
 		;
 	}
 
@@ -41,16 +43,16 @@ Ext.define(Dnet.ns.bd + "AttributeValue_Dc$CtxEditList" , {
 	_defineColumns_: function() {
 		this._getBuilder_()	
 		.addNumberColumn({name:"subSetNo", dataIndex:"subSetNo", hidden:true, align:"right", width:70, format:"0", noEdit: true })
-		.addTextColumn({name:"subSet", dataIndex:"subSet", hidden:true, width:120, caseRestriction:"uppercase"})
-		.addTextColumn({name:"subSetName", dataIndex:"subSetName", width:200, noEdit: true})
+		.addTextColumn({name:"subSetId", dataIndex:"subSetId", hidden:true, width:100, noEdit: true})
+		.addTextColumn({name:"subSet", dataIndex:"subSet", width:120, caseRestriction:"uppercase", noEdit: true})
+		.addTextColumn({name:"subSetName", dataIndex:"subSetName", hidden:true, width:200, noEdit: true})
 		.addNumberColumn({name:"setAttributeNo", dataIndex:"setAttributeNo", hidden:true, align:"right", width:70, format:"0", noEdit: true })
-		.addTextColumn({name:"attribute", dataIndex:"attribute", hidden:true, width:120, caseRestriction:"uppercase", noEdit: true})
-		.addTextColumn({name:"attributeName", dataIndex:"attributeName", width:200, noEdit: true})
+		.addTextColumn({name:"setAttributeId", dataIndex:"setAttributeId", hidden:true, width:100, noEdit: true})
+		.addTextColumn({name:"attributeId", dataIndex:"attributeId", hidden:true, width:100, noEdit: true})
+		.addTextColumn({name:"attribute", dataIndex:"attribute", width:120, caseRestriction:"uppercase", noEdit: true})
+		.addTextColumn({name:"attributeName", dataIndex:"attributeName", hidden:true, width:200, noEdit: true})
 		.addTextColumn({name:"value", dataIndex:"value", width:250})
 		.addTextColumn({name:"targetRefid", dataIndex:"targetRefid", hidden:true, width:100, noEdit: true})
-		.addTextColumn({name:"subSetId", dataIndex:"subSetId", hidden:true, width:100, noEdit: true})
-		.addTextColumn({name:"attributeId", dataIndex:"attributeId", hidden:true, width:100, noEdit: true})
-		.addTextColumn({name:"setAttributeId", dataIndex:"setAttributeId", hidden:true, width:100, noEdit: true})
 		.addTextColumn({name:"attributeSetId", dataIndex:"attributeSetId", hidden:true, width:100, noEdit: true})
 		.addDefaults();
 	},

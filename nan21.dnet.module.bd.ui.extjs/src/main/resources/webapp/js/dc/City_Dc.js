@@ -22,7 +22,7 @@ Ext.define(Dnet.ns.bd + "City_Dc$Filter" , {
 		
 		/* =========== controls =========== */
 		.addTextField({ name:"name", dataIndex:"name"})
-		.addLov({xtype:"bd_Countries_Lov", name:"country", dataIndex:"country", caseRestriction:"uppercase",
+		.addLov({name:"country", dataIndex:"country", xtype:"bd_Countries_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "countryId"} ]})
 		
 		/* =========== containers =========== */

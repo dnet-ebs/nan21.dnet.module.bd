@@ -22,6 +22,7 @@ Ext.define(Dnet.ns.bd + "AttributeSubSet_Ds", {
 		{name:"sequenceNo", type:"int", useNull:true},
 		{name:"attributeSetId", type:"string"},
 		{name:"attributeSet", type:"string"},
+		{name:"attributeSetName", type:"string"},
 		{name:"id", type:"string"},
 		{name:"code", type:"string"},
 		{name:"name", type:"string"},

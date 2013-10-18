@@ -21,7 +21,7 @@ Ext.define(Dnet.ns.bd + "AttributeCategory_Dc$Filter" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_AttributeCategories_Lov", name:"code", dataIndex:"code", caseRestriction:"uppercase",
+		.addLov({name:"code", dataIndex:"code", xtype:"bd_AttributeCategories_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "id"} ]})
 		.addTextField({ name:"name", dataIndex:"name"})
 		.addBooleanField({ name:"active", dataIndex:"active"})

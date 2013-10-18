@@ -22,11 +22,11 @@ Ext.define(Dnet.ns.bd + "ClassificationCode_Dc$Filter" , {
 		
 		/* =========== controls =========== */
 		.addTextField({ name:"name", dataIndex:"name"})
-		.addLov({xtype:"bd_ClassificationItems_Lov", name:"code", dataIndex:"code", caseRestriction:"uppercase",
+		.addLov({name:"code", dataIndex:"code", xtype:"bd_ClassificationItems_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "id"} ]})
 		.addBooleanField({ name:"active", dataIndex:"active"})
 		.addTextField({ name:"notes", dataIndex:"notes"})
-		.addLov({xtype:"bd_ClassificationSystemsAll_Lov", name:"classSystem", dataIndex:"classSystem", caseRestriction:"uppercase",
+		.addLov({name:"classSystem", dataIndex:"classSystem", xtype:"bd_ClassificationSystemsAll_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "classSystemId"} ]})
 		
 		/* =========== containers =========== */
@@ -54,6 +54,7 @@ Ext.define(Dnet.ns.bd + "ClassificationCode_Dc$Filter" , {
 Ext.define(Dnet.ns.bd + "ClassificationCode_Dc$EditList" , {
 	extend: "dnet.core.dc.view.AbstractDcvEditableGrid",
 	alias: "widget.bd_ClassificationCode_Dc$EditList",
+	_bulkEditFields_: ["active","classSystem"],
 
 	/**
 	 * Columns definition

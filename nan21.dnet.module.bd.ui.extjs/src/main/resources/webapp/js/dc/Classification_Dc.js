@@ -56,13 +56,13 @@ Ext.define(Dnet.ns.bd + "Classification_Dc$EditList" , {
 		.addLov({name:"system", dataIndex:"system", xtype:"gridcolumn", width:150, 
 			editor:{xtype:"bd_ClassificationSystems_Lov", selectOnFocus:true, allowBlank:false, caseRestriction:"uppercase",
 				retFieldMapping: [{lovField:"id", dsField: "systemId"} ,{lovField:"name", dsField: "systemName"} ],
-				filterFieldMapping: [{lovField:"targetAlias", dsField: "targetAlias"}, {lovField:"targetType", dsField: "targetType"} ]}})
-		.addTextColumn({name:"systemName", dataIndex:"systemName", width:300, noEdit: true})
+				filterFieldMapping: [{lovField:"targetAlias", dsField: "targetAlias"}, {lovField:"targetType", dsField: "targetType"}, {lovField:"active", value: "true"} ]}})
+		.addTextColumn({name:"systemName", dataIndex:"systemName", hidden:true, width:300, noEdit: true})
 		.addLov({name:"item", dataIndex:"item", xtype:"gridcolumn", width:150, 
 			editor:{xtype:"bd_ClassificationItems_Lov", selectOnFocus:true, allowBlank:false, caseRestriction:"uppercase",
 				retFieldMapping: [{lovField:"id", dsField: "itemId"} ,{lovField:"name", dsField: "itemName"} ],
-				filterFieldMapping: [{lovField:"classSystemId", dsField: "systemId"} ]}})
-		.addTextColumn({name:"itemName", dataIndex:"itemName", width:300, noEdit: true})
+				filterFieldMapping: [{lovField:"classSystemId", dsField: "systemId"}, {lovField:"active", value: "true"} ]}})
+		.addTextColumn({name:"itemName", dataIndex:"itemName", width:280, noEdit: true})
 		.addTextColumn({name:"systemId", dataIndex:"systemId", hidden:true, width:100, noEdit: true})
 		.addTextColumn({name:"itemId", dataIndex:"itemId", hidden:true, width:100, noEdit: true})
 		.addTextColumn({name:"targetRefid", dataIndex:"targetRefid", hidden:true, width:100, noEdit: true})

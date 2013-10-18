@@ -22,10 +22,10 @@ Ext.define(Dnet.ns.bd + "Uom_Dc$Filter" , {
 		
 		/* =========== controls =========== */
 		.addTextField({ name:"name", dataIndex:"name"})
-		.addLov({xtype:"bd_Uoms_Lov", name:"code", dataIndex:"code", caseRestriction:"uppercase",
+		.addLov({name:"code", dataIndex:"code", xtype:"bd_Uoms_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "id"} ]})
 		.addBooleanField({ name:"active", dataIndex:"active"})
-		.addLov({xtype:"bd_UomTypes_Lov", name:"type", dataIndex:"type", caseRestriction:"uppercase",
+		.addLov({name:"type", dataIndex:"type", xtype:"bd_UomTypes_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "typeId"} ]})
 		
 		/* =========== containers =========== */
@@ -108,7 +108,7 @@ Ext.define(Dnet.ns.bd + "Uom_Dc$Edit" , {
 		.addTextField({ name:"code", dataIndex:"code", allowBlank:false, caseRestriction:"uppercase"})
 		.addBooleanField({ name:"active", dataIndex:"active"})
 		.addTextArea({ name:"notes", dataIndex:"notes"})
-		.addLov({xtype:"bd_UomTypes_Lov", name:"type", dataIndex:"type", allowBlank:false, caseRestriction:"uppercase",
+		.addLov({name:"type", dataIndex:"type", allowBlank:false, xtype:"bd_UomTypes_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "typeId"} ]})
 		
 		/* =========== containers =========== */

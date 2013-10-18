@@ -21,11 +21,11 @@ Ext.define(Dnet.ns.bd + "CurrencyXRate_Dc$Filter" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_Currencies_Lov", name:"source", dataIndex:"source", caseRestriction:"uppercase",
+		.addLov({name:"source", dataIndex:"source", xtype:"bd_Currencies_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "sourceId"} ]})
-		.addLov({xtype:"bd_Currencies_Lov", name:"target", dataIndex:"target", caseRestriction:"uppercase",
+		.addLov({name:"target", dataIndex:"target", xtype:"bd_Currencies_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "targetId"} ]})
-		.addLov({xtype:"bd_CurrencyXRateProviders_Lov", name:"provider", dataIndex:"provider", caseRestriction:"uppercase",
+		.addLov({name:"provider", dataIndex:"provider", xtype:"bd_CurrencyXRateProviders_Lov", caseRestriction:"uppercase",
 			retFieldMapping: [{lovField:"id", dsField: "providerId"} ]})
 		.addDateField({name:"validAt", dataIndex:"validAt"})
 		

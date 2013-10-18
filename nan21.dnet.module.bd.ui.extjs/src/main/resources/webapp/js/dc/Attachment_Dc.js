@@ -46,7 +46,7 @@ Ext.define(Dnet.ns.bd + "Attachment_Dc$Filter" , {
 		
 		/* =========== controls =========== */
 		.addTextField({ name:"name", dataIndex:"name"})
-		.addLov({xtype:"bd_AttachmentTypes_Lov", name:"type", dataIndex:"type",
+		.addLov({name:"type", dataIndex:"type", xtype:"bd_AttachmentTypes_Lov",
 			retFieldMapping: [{lovField:"id", dsField: "typeId"} ]})
 		.addTextField({ name:"targetType", dataIndex:"targetType"})
 		
@@ -103,7 +103,7 @@ Ext.define(Dnet.ns.bd + "Attachment_Dc$Create" , {
 		this._getBuilder_()
 		
 		/* =========== controls =========== */
-		.addLov({xtype:"bd_AttachmentTypes_Lov", name:"type", dataIndex:"type", allowBlank:false,
+		.addLov({name:"type", dataIndex:"type", allowBlank:false, xtype:"bd_AttachmentTypes_Lov",
 			retFieldMapping: [{lovField:"id", dsField: "typeId"} ],
 			filterFieldMapping: [{lovField:"targetAlias", dsField: "targetAlias"}, {lovField:"targetType", dsField: "targetType"} ]})
 		.addTextField({ name:"name", dataIndex:"name", allowBlank:false})
