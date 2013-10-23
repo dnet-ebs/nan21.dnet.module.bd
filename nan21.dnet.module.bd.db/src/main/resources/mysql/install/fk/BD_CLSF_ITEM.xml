@@ -8,7 +8,6 @@
 		baseTableName="BD_CLSF_ITEM"
 		baseColumnNames="CLASSSYSTEM_ID"
 		referencedTableName="BD_CLSF_SYS" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 </databaseChangeLog>

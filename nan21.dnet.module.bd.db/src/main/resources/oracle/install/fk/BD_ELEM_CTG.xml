@@ -8,7 +8,6 @@
 		baseTableName="BD_ELEM_CTG"
 		baseColumnNames="ENGINE_ID"
 		referencedTableName="BD_ELEM_CTX" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 </databaseChangeLog>

@@ -8,7 +8,6 @@
 		baseTableName="BD_GEO_REGION"
 		baseColumnNames="COUNTRY_ID"
 		referencedTableName="BD_GEO_CNTRY" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 </databaseChangeLog>

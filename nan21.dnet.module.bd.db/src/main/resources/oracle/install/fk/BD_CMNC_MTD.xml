@@ -8,7 +8,6 @@
 		baseTableName="BD_CMNC_MTD"
 		baseColumnNames="TYPE_ID"
 		referencedTableName="BD_CMNC_MTD_TYPE" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 </databaseChangeLog>

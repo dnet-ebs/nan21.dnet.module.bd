@@ -8,7 +8,6 @@
 		baseTableName="BD_ELEM_FORMULA"
 		baseColumnNames="ELEMENT_ID"
 		referencedTableName="BD_ELEM" 
-		referencedColumnNames="ID"
-		onDelete="CASCADE"/>
+		referencedColumnNames="ID" onDelete="CASCADE"/>
 </changeSet>
 </databaseChangeLog>

@@ -8,7 +8,6 @@
 		baseTableName="BD_NOTE"
 		baseColumnNames="TYPE_ID"
 		referencedTableName="BD_NOTE_TYPE" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 </databaseChangeLog>

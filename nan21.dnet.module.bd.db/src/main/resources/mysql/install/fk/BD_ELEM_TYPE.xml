@@ -8,15 +8,13 @@
 		baseTableName="BD_ELEM_TYPE"
 		baseColumnNames="ENGINE_ID"
 		referencedTableName="BD_ELEM_CTX" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 <changeSet author="amathe" id="FK-2">
 	<addForeignKeyConstraint constraintName="FK_BD_ELEM_TYPE2" 
 		baseTableName="BD_ELEM_TYPE"
 		baseColumnNames="CATEGORY_ID"
 		referencedTableName="BD_ELEM_CTG" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 </databaseChangeLog>
