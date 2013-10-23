@@ -46,9 +46,7 @@
 			<column name="CATEGORY_ID" type="varchar2(64)">
 				<constraints nullable="false"/>
 			</column>
-			<column name="UOM_ID" type="varchar2(64)">
-				<constraints />
-			</column>
+			<column name="UOM_ID" type="varchar2(64)"/>
 		</createTable>
 	</changeSet>
 

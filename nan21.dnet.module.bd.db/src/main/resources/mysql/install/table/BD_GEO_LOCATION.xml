@@ -48,15 +48,11 @@
 			</column>
 			<column name="VERSION" type="bigint(10)"/>
 			<column name="ZIP" type="varchar(32)"/>
-			<column name="CITY_ID" type="varchar(64)">
-				<constraints />
-			</column>
+			<column name="CITY_ID" type="varchar(64)"/>
 			<column name="COUNTRY_ID" type="varchar(64)">
 				<constraints nullable="false"/>
 			</column>
-			<column name="REGION_ID" type="varchar(64)">
-				<constraints />
-			</column>
+			<column name="REGION_ID" type="varchar(64)"/>
 		</createTable>
 	</changeSet>
 
