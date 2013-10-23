@@ -9,9 +9,6 @@
 			<column name="ACTIVE" type="number(1)">
 				<constraints nullable="false"/>
 			</column>
-			<column name="ACTIVE" type="number(1)">
-				<constraints nullable="false"/>
-			</column>
 			<column name="CLIENTID" type="varchar2(64)">
 				<constraints nullable="false"/>
 			</column>

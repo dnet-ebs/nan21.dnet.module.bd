@@ -36,9 +36,6 @@ public class Attachment extends AbstractAuditable {
 	@Column(name = "CONTENTTYPE", length = 4)
 	private String contentType;
 
-	@Column(name = "NOTES", length = 4000)
-	private String notes;
-
 	@NotBlank
 	@Column(name = "TARGETREFID", nullable = false, length = 64)
 	private String targetRefid;
@@ -76,14 +73,6 @@ public class Attachment extends AbstractAuditable {
 
 	public void setContentType(String contentType) {
 		this.contentType = contentType;
-	}
-
-	public String getNotes() {
-		return this.notes;
-	}
-
-	public void setNotes(String notes) {
-		this.notes = notes;
 	}
 
 	@Transient

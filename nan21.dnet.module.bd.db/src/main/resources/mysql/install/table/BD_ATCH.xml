@@ -33,7 +33,6 @@
 				<constraints nullable="false"/>
 			</column>
 			<column name="NOTES" type="text"/>
-			<column name="NOTES" type="text"/>
 			<column name="REFID" type="varchar(64)">
 				<constraints nullable="false"/>
 			</column>

@@ -8,7 +8,6 @@
 		baseTableName="BD_ATTRSUBSET"
 		baseColumnNames="ATTRIBUTESET_ID"
 		referencedTableName="BD_ATTRSET" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 </databaseChangeLog>

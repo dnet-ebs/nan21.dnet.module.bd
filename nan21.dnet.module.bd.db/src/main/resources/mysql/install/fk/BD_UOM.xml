@@ -8,7 +8,6 @@
 		baseTableName="BD_UOM"
 		baseColumnNames="TYPE_ID"
 		referencedTableName="BD_UOM_TYPE" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 </databaseChangeLog>

@@ -8,23 +8,20 @@
 		baseTableName="BD_ATTRSET_ATTR"
 		baseColumnNames="ATTRIBUTE_ID"
 		referencedTableName="BD_ATTR" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 <changeSet author="amathe" id="FK-2">
 	<addForeignKeyConstraint constraintName="FK_BD_ATTRSET_ATTR2" 
 		baseTableName="BD_ATTRSET_ATTR"
 		baseColumnNames="ATTRIBUTESET_ID"
 		referencedTableName="BD_ATTRSET" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 <changeSet author="amathe" id="FK-3">
 	<addForeignKeyConstraint constraintName="FK_BD_ATTRSET_ATTR3" 
 		baseTableName="BD_ATTRSET_ATTR"
 		baseColumnNames="ATTRIBUTESUBSET_ID"
 		referencedTableName="BD_ATTRSUBSET" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 </databaseChangeLog>

@@ -33,7 +33,7 @@ public class CommentType extends AbstractType {
 	public static final String NQ_FIND_BY_NAME = "CommentType.findByName";
 
 	@NotBlank
-	@Column(name = "TARGETFQN", nullable = false, length = 400)
+	@Column(name = "TARGETFQN", nullable = false, length = 255)
 	private String targetFqn;
 
 	@Column(name = "TARGETTYPE", length = 32)

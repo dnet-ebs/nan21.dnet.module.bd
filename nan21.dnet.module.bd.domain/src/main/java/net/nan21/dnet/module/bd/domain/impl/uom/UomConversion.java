@@ -13,7 +13,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import net.nan21.dnet.core.domain.impl.AbstractAuditable;
 import net.nan21.dnet.module.bd.domain.impl.uom.Uom;
 
@@ -33,10 +32,6 @@ public class UomConversion extends AbstractAuditable {
 	/** Division factor. Specify either a multiplication or a division factor */
 	@Column(name = "DIVIDETO", precision = 19, scale = 6)
 	private BigDecimal divideTo;
-
-	@NotNull
-	@Column(name = "ACTIVE", nullable = false)
-	private Boolean active;
 
 	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Uom.class)
 	@JoinColumn(name = "SOURCE_ID", referencedColumnName = "ID")
@@ -60,14 +55,6 @@ public class UomConversion extends AbstractAuditable {
 
 	public void setDivideTo(BigDecimal divideTo) {
 		this.divideTo = divideTo;
-	}
-
-	public Boolean getActive() {
-		return this.active;
-	}
-
-	public void setActive(Boolean active) {
-		this.active = active;
 	}
 
 	public Uom getSource() {
@@ -95,8 +82,5 @@ public class UomConversion extends AbstractAuditable {
 	@PrePersist
 	public void prePersist() {
 		super.prePersist();
-		if (this.active == null) {
-			this.active = new Boolean(false);
-		}
 	}
 }

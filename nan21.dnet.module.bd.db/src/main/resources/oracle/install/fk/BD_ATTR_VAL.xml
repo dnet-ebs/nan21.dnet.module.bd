@@ -8,7 +8,6 @@
 		baseTableName="BD_ATTR_VAL"
 		baseColumnNames="SETATTRIBUTE_ID"
 		referencedTableName="BD_ATTRSET_ATTR" 
-		referencedColumnNames="ID"
-		/>
+		referencedColumnNames="ID"/>
 </changeSet>
 </databaseChangeLog>
