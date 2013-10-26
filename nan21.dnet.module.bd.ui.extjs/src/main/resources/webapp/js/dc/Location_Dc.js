@@ -66,6 +66,7 @@ Ext.define(Dnet.ns.bd + "Location_Dc$ListCtx" , {
 		.addTextColumn({ name:"region", dataIndex:"region", width:120})
 		.addTextColumn({ name:"cityName", dataIndex:"cityName", width:120})
 		.addTextColumn({ name:"adress", dataIndex:"adress", width:200})
+		.addTextColumn({ name:"zip", dataIndex:"zip", width:100})
 		.addTextColumn({ name:"notes", dataIndex:"notes", hidden:true, width:200})
 		.addBooleanColumn({ name:"billing", dataIndex:"billing", width:60})
 		.addBooleanColumn({ name:"mailing", dataIndex:"mailing", width:60})
@@ -97,6 +98,7 @@ Ext.define(Dnet.ns.bd + "Location_Dc$EditCtx" , {
 			retFieldMapping: [{lovField:"id", dsField: "regionId"} ],
 			filterFieldMapping: [{lovField:"countryId", dsField: "countryId"} ]})
 		.addTextField({ name:"cityName", dataIndex:"cityName"})
+		.addTextField({ name:"zip", dataIndex:"zip", maxLength:32})
 		.addTextArea({ name:"adress", dataIndex:"adress", allowBlank:false, height:60})
 		.addTextArea({ name:"notes", dataIndex:"notes", height:60})
 		.addBooleanField({ name:"billing", dataIndex:"billing"})
@@ -118,7 +120,7 @@ Ext.define(Dnet.ns.bd + "Location_Dc$EditCtx" , {
 	_linkElements_: function() {
 		this._getBuilder_()
 		.addChildrenTo("main", ["col1", "col2", "col3"])
-		.addChildrenTo("col1", ["country", "region", "cityName"])
+		.addChildrenTo("col1", ["country", "region", "cityName", "zip"])
 		.addChildrenTo("col2", ["adress", "notes"])
 		.addChildrenTo("col3", ["billing", "mailing", "shipping", "active"]);
 	}

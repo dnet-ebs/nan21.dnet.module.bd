@@ -26,6 +26,7 @@ public class Location_Ds extends AbstractAuditableDs<Location> {
 	public static final String f_regionName = "regionName";
 	public static final String f_cityName = "cityName";
 	public static final String f_adress = "adress";
+	public static final String f_zip = "zip";
 	public static final String f_shipping = "shipping";
 	public static final String f_billing = "billing";
 	public static final String f_mailing = "mailing";
@@ -43,6 +44,9 @@ public class Location_Ds extends AbstractAuditableDs<Location> {
 
 	@DsField
 	private String adress;
+
+	@DsField
+	private String zip;
 
 	@DsField(path = "forShipping")
 	private Boolean shipping;
@@ -98,6 +102,14 @@ public class Location_Ds extends AbstractAuditableDs<Location> {
 
 	public void setAdress(String adress) {
 		this.adress = adress;
+	}
+
+	public String getZip() {
+		return this.zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
 	}
 
 	public Boolean getShipping() {

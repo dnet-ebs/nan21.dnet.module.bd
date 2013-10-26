@@ -11,6 +11,7 @@ Ext.define(Dnet.ns.bd + "Location_Ds", {
 		{name:"regionName", type:"string"},
 		{name:"cityName", type:"string"},
 		{name:"adress", type:"string"},
+		{name:"zip", type:"string"},
 		{name:"shipping", type:"boolean"},
 		{name:"billing", type:"boolean"},
 		{name:"mailing", type:"boolean"},
