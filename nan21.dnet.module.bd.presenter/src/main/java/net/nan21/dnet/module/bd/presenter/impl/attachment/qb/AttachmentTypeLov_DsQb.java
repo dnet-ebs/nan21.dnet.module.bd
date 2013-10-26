@@ -19,6 +19,6 @@ public class AttachmentTypeLov_DsQb
 		if (filter.getTargetType() == null || filter.getTargetType().equals("")) {
 			filter.setTargetType("N/A");
 		}
-		this.filter = filter;
+		super.setFilter(filter);
 	}
 }
