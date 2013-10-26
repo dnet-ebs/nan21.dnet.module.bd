@@ -17,7 +17,7 @@ public class AttachmentTypeLov_Ds extends AbstractTypeLov<AttachmentType> {
 	public static final String f_targetAlias = "targetAlias";
 	public static final String f_targetType = "targetType";
 
-	@DsField(fetch = false, jpqlFilter = "  e.refid in (select t.sourceRefId from TargetRule t where  t.targetAlias = :targetAlias and  t.targetType = :targetType ) ")
+	@DsField(fetch = false, jpqlFilter = "  e.refid in (select t.sourceRefId from TargetRule t where  t.targetAlias = :targetAlias and  t.targetType = :targetType and t.clientId = :clientId ) ")
 	private String targetAlias;
 
 	@DsField(fetch = false)
