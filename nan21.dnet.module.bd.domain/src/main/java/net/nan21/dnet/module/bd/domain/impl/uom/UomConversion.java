@@ -26,11 +26,11 @@ public class UomConversion extends AbstractAuditable {
 	private static final long serialVersionUID = -8865917134914502125L;
 
 	/** Multiplication factor. Specify either a multiplication or a division factor */
-	@Column(name = "MULTIPLYWITH", precision = 19, scale = 6)
+	@Column(name = "MULTIPLYWITH", precision = 21, scale = 6)
 	private BigDecimal multiplyWith;
 
 	/** Division factor. Specify either a multiplication or a division factor */
-	@Column(name = "DIVIDETO", precision = 19, scale = 6)
+	@Column(name = "DIVIDETO", precision = 21, scale = 6)
 	private BigDecimal divideTo;
 
 	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Uom.class)

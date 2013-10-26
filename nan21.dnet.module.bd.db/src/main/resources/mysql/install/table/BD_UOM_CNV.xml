@@ -18,7 +18,7 @@
 			<column name="CREATEDBY" type="varchar(32)">
 				<constraints nullable="false"/>
 			</column>
-			<column name="DIVIDETO" type="decimal(19,6)"/>
+			<column name="DIVIDETO" type="decimal(21,6)"/>
 			<column name="ID" type="varchar(64)">
 				<constraints nullable="false"/>
 			</column>
@@ -28,7 +28,7 @@
 			<column name="MODIFIEDBY" type="varchar(32)">
 				<constraints nullable="false"/>
 			</column>
-			<column name="MULTIPLYWITH" type="decimal(19,6)"/>
+			<column name="MULTIPLYWITH" type="decimal(21,6)"/>
 			<column name="NOTES" type="text"/>
 			<column name="REFID" type="varchar(64)">
 				<constraints nullable="false"/>

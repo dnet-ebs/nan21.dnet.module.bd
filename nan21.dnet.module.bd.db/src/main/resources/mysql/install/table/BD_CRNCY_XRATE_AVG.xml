@@ -37,7 +37,7 @@
 			<column name="VALIDTO" type="date">
 				<constraints nullable="false"/>
 			</column>
-			<column name="VALUE" type="decimal(18,2)">
+			<column name="VALUE" type="decimal(21,6)">
 				<constraints nullable="false"/>
 			</column>
 			<column name="VERSION" type="bigint(10)"/>

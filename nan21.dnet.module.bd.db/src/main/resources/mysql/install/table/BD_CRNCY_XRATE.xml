@@ -34,7 +34,7 @@
 			<column name="VALIDAT" type="date">
 				<constraints nullable="false"/>
 			</column>
-			<column name="VALUE" type="decimal(19,6)">
+			<column name="VALUE" type="decimal(21,6)">
 				<constraints nullable="false"/>
 			</column>
 			<column name="VERSION" type="bigint(10)"/>

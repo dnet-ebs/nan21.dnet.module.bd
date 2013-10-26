@@ -57,7 +57,7 @@ public class CurrencyXRate extends AbstractAuditable {
 
 	/** Exchange rate value. */
 	@NotNull
-	@Column(name = "VALUE", nullable = false, precision = 19, scale = 6)
+	@Column(name = "VALUE", nullable = false, precision = 21, scale = 6)
 	private BigDecimal value;
 
 	@ManyToOne(fetch = FetchType.LAZY, targetEntity = CurrencyXRateProvider.class)

@@ -40,7 +40,7 @@ public class CurrencyXRateAverage extends AbstractAuditable {
 	private Date validTo;
 
 	@NotNull
-	@Column(name = "VALUE", nullable = false, precision = 18, scale = 2)
+	@Column(name = "VALUE", nullable = false, precision = 21, scale = 6)
 	private BigDecimal value;
 
 	@ManyToOne(fetch = FetchType.LAZY, targetEntity = CurrencyXRateProvider.class)
