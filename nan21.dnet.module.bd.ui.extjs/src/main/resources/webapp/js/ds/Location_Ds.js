@@ -18,6 +18,7 @@ Ext.define(Dnet.ns.bd + "Location_Ds", {
 		{name:"targetRefid", type:"string"},
 		{name:"countryId", type:"string"},
 		{name:"country", type:"string"},
+		{name:"countryIso2", type:"string"},
 		{name:"regionId", type:"string"},
 		{name:"region", type:"string"},
 		{name:"id", type:"string"},

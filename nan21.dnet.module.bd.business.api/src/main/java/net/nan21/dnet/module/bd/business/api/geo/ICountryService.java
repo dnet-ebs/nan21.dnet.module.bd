@@ -23,4 +23,9 @@ public interface ICountryService extends IEntityService<Country> {
 	 * Find by unique key
 	 */
 	public Country findByName(String name);
+
+	/**
+	 * Find by unique key
+	 */
+	public Country findByIso2(String iso2);
 }

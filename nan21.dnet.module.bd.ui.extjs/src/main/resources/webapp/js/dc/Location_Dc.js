@@ -36,7 +36,8 @@ Ext.define(Dnet.ns.bd + "Location_Dc$Filter" , {
 		.addPanel({ name:"main", autoScroll:true, layout: {type:"hbox", align:'top', pack:'start', defaultMargins: {right:5, left:5}},
 		autoScroll:true, padding:"0 30 5 0"})
 		.addPanel({ name:"col1", width:250, layout:"form"})
-		.addPanel({ name:"col2", width:180, layout:"form"});
+		.addPanel({ name:"col2", width:170, layout:"form"})
+		.addPanel({ name:"col3", width:170, layout:"form"});
 	},
 
 	/**
@@ -44,9 +45,10 @@ Ext.define(Dnet.ns.bd + "Location_Dc$Filter" , {
 	 */				
 	_linkElements_: function() {
 		this._getBuilder_()
-		.addChildrenTo("main", ["col1", "col2"])
+		.addChildrenTo("main", ["col1", "col2", "col3"])
 		.addChildrenTo("col1", ["country", "region", "cityName"])
-		.addChildrenTo("col2", ["billing", "mailing", "shipping", "active"]);
+		.addChildrenTo("col2", ["billing", "mailing"])
+		.addChildrenTo("col3", ["shipping", "active"]);
 	}
 });
 
@@ -63,7 +65,10 @@ Ext.define(Dnet.ns.bd + "Location_Dc$ListCtx" , {
 	_defineColumns_: function() {
 		this._getBuilder_()
 		.addTextColumn({ name:"country", dataIndex:"country", width:120})
+		.addTextColumn({ name:"countryId", dataIndex:"countryId", hidden:true, width:100})
+		.addTextColumn({ name:"countryIso2", dataIndex:"countryIso2", hidden:true, width:50})
 		.addTextColumn({ name:"region", dataIndex:"region", width:120})
+		.addTextColumn({ name:"regionId", dataIndex:"regionId", hidden:true, width:100})
 		.addTextColumn({ name:"cityName", dataIndex:"cityName", width:120})
 		.addTextColumn({ name:"adress", dataIndex:"adress", width:200})
 		.addTextColumn({ name:"zip", dataIndex:"zip", width:100})
@@ -72,8 +77,6 @@ Ext.define(Dnet.ns.bd + "Location_Dc$ListCtx" , {
 		.addBooleanColumn({ name:"mailing", dataIndex:"mailing", width:60})
 		.addBooleanColumn({ name:"shipping", dataIndex:"shipping", width:60})
 		.addBooleanColumn({ name:"active", dataIndex:"active", width:60})
-		.addTextColumn({ name:"countryId", dataIndex:"countryId", hidden:true, width:100})
-		.addTextColumn({ name:"regionId", dataIndex:"regionId", hidden:true, width:100})
 		.addDefaults();
 	}
 });

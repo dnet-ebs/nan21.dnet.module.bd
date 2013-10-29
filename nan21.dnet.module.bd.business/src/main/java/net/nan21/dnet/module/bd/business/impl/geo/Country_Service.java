@@ -55,4 +55,15 @@ public class Country_Service extends AbstractEntityService<Country>
 						Session.user.get().getClient().getId())
 				.setParameter("name", name).getSingleResult();
 	}
+	/**
+	 * Find by unique key
+	 */
+	public Country findByIso2(String iso2) {
+		return (Country) this
+				.getEntityManager()
+				.createNamedQuery(Country.NQ_FIND_BY_ISO2)
+				.setParameter("clientId",
+						Session.user.get().getClient().getId())
+				.setParameter("iso2", iso2).getSingleResult();
+	}
 }

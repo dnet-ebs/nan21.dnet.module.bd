@@ -17,19 +17,23 @@ import javax.validation.constraints.NotNull;
 import net.nan21.dnet.core.domain.impl.AbstractTypeWithCode;
 import org.eclipse.persistence.config.HintValues;
 import org.eclipse.persistence.config.QueryHints;
+import org.hibernate.validator.constraints.NotBlank;
 
 /**
  * 
  */
 @NamedQueries({
 		@NamedQuery(name = Country.NQ_FIND_BY_CODE, query = "SELECT e FROM Country e WHERE e.clientId = :clientId and e.code = :code", hints = @QueryHint(name = QueryHints.BIND_PARAMETERS, value = HintValues.TRUE)),
-		@NamedQuery(name = Country.NQ_FIND_BY_NAME, query = "SELECT e FROM Country e WHERE e.clientId = :clientId and e.name = :name", hints = @QueryHint(name = QueryHints.BIND_PARAMETERS, value = HintValues.TRUE))})
+		@NamedQuery(name = Country.NQ_FIND_BY_NAME, query = "SELECT e FROM Country e WHERE e.clientId = :clientId and e.name = :name", hints = @QueryHint(name = QueryHints.BIND_PARAMETERS, value = HintValues.TRUE)),
+		@NamedQuery(name = Country.NQ_FIND_BY_ISO2, query = "SELECT e FROM Country e WHERE e.clientId = :clientId and e.iso2 = :iso2", hints = @QueryHint(name = QueryHints.BIND_PARAMETERS, value = HintValues.TRUE))})
 @Entity
 @Table(name = Country.TABLE_NAME, uniqueConstraints = {
 		@UniqueConstraint(name = Country.TABLE_NAME + "_UK1", columnNames = {
 				"CLIENTID", "CODE"}),
 		@UniqueConstraint(name = Country.TABLE_NAME + "_UK2", columnNames = {
-				"CLIENTID", "NAME"})})
+				"CLIENTID", "NAME"}),
+		@UniqueConstraint(name = Country.TABLE_NAME + "_UK3", columnNames = {
+				"CLIENTID", "ISO2"})})
 public class Country extends AbstractTypeWithCode {
 
 	public static final String TABLE_NAME = "BD_GEO_CNTRY";
@@ -43,8 +47,13 @@ public class Country extends AbstractTypeWithCode {
 	 * Named query find by unique key: Name.
 	 */
 	public static final String NQ_FIND_BY_NAME = "Country.findByName";
+	/**
+	 * Named query find by unique key: Iso2.
+	 */
+	public static final String NQ_FIND_BY_ISO2 = "Country.findByIso2";
 
-	@Column(name = "ISO2", length = 2)
+	@NotBlank
+	@Column(name = "ISO2", nullable = false, length = 2)
 	private String iso2;
 
 	@Column(name = "ISO3", length = 3)

@@ -28,7 +28,9 @@
 			<column name="ID" type="varchar(64)">
 				<constraints nullable="false"/>
 			</column>
-			<column name="ISO2" type="varchar(2)"/>
+			<column name="ISO2" type="varchar(2)">
+				<constraints nullable="false"/>
+			</column>
 			<column name="ISO3" type="varchar(3)"/>
 			<column name="MODIFIEDAT" type="datetime">
 				<constraints nullable="false"/>
@@ -66,6 +68,13 @@
 			constraintName="UK_BD_GEO_CNTRY2"
 			tableName="BD_GEO_CNTRY"
 			columnNames="CLIENTID,NAME"/>
+	</changeSet>
+	
+	<changeSet author="amathe" id="UK-3">
+		<addUniqueConstraint
+			constraintName="UK_BD_GEO_CNTRY3"
+			tableName="BD_GEO_CNTRY"
+			columnNames="CLIENTID,ISO2"/>
 	</changeSet>
 
 </databaseChangeLog>

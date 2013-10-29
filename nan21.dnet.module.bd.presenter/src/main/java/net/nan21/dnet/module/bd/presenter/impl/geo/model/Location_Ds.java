@@ -18,6 +18,7 @@ import net.nan21.dnet.module.bd.domain.impl.geo.Region;
 @Ds(entity = Location.class)
 @RefLookups({
 		@RefLookup(refId = Location_Ds.f_countryId, namedQuery = Country.NQ_FIND_BY_CODE, params = {@Param(name = "code", field = Location_Ds.f_country)}),
+		@RefLookup(refId = Location_Ds.f_countryId, namedQuery = Country.NQ_FIND_BY_ISO2, params = {@Param(name = "iso2", field = Location_Ds.f_countryIso2)}),
 		@RefLookup(refId = Location_Ds.f_regionId, namedQuery = Region.NQ_FIND_BY_CODEANDCOUNTRY_PRIMITIVE, params = {
 				@Param(name = "countryId", field = Location_Ds.f_countryId),
 				@Param(name = "code", field = Location_Ds.f_region)})})
@@ -33,6 +34,7 @@ public class Location_Ds extends AbstractAuditableDs<Location> {
 	public static final String f_targetRefid = "targetRefid";
 	public static final String f_countryId = "countryId";
 	public static final String f_country = "country";
+	public static final String f_countryIso2 = "countryIso2";
 	public static final String f_regionId = "regionId";
 	public static final String f_region = "region";
 
@@ -65,6 +67,9 @@ public class Location_Ds extends AbstractAuditableDs<Location> {
 
 	@DsField(join = "left", path = "country.code")
 	private String country;
+
+	@DsField(join = "left", path = "country.iso2")
+	private String countryIso2;
 
 	@DsField(join = "left", path = "region.id")
 	private String regionId;
@@ -158,6 +163,14 @@ public class Location_Ds extends AbstractAuditableDs<Location> {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public String getCountryIso2() {
+		return this.countryIso2;
+	}
+
+	public void setCountryIso2(String countryIso2) {
+		this.countryIso2 = countryIso2;
 	}
 
 	public String getRegionId() {
