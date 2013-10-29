@@ -14,4 +14,21 @@
 		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.other.model.TargetRule_Ds"/>
 		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.other.TargetRule"/>
 	</bean>
+	
+	<!-- ==================== LookupItem ==================== -->
+		
+	<bean id="LookupItem_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.other.model.LookupItem_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.other.LookupItem"/>
+	</bean>
+	
+	<!-- ==================== LookupItemLov ==================== -->
+		
+	<bean id="LookupItemLov_Ds" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.core.presenter.service.ds.DefaultEntityDsService">
+		<property name="modelClass" value="net.nan21.dnet.module.bd.presenter.impl.other.model.LookupItemLov_Ds"/>
+		<property name="entityClass" value="net.nan21.dnet.module.bd.domain.impl.other.LookupItem"/>
+		<property name="readOnly" value="true" />
+	</bean>
 </beans>
