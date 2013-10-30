@@ -9,7 +9,4 @@
 
 	<bean id="TargetRule" scope="singleton" lazy-init="true"
 		class="net.nan21.dnet.module.bd.business.impl.other.TargetRule_Service"/>				
-
-	<bean id="LookupItem" scope="singleton" lazy-init="true"
-		class="net.nan21.dnet.module.bd.business.impl.other.LookupItem_Service"/>				
 </beans>

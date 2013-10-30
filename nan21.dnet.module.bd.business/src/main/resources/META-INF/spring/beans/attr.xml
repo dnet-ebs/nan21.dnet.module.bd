@@ -7,6 +7,9 @@
 			http://www.springframework.org/schema/context 
 				http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<bean id="LookupItem" scope="singleton" lazy-init="true"
+		class="net.nan21.dnet.module.bd.business.impl.attr.LookupItem_Service"/>				
+
 	<bean id="AttributeCategory" scope="singleton" lazy-init="true"
 		class="net.nan21.dnet.module.bd.business.impl.attr.AttributeCategory_Service"/>				
 

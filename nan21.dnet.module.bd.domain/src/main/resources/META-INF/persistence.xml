@@ -14,6 +14,7 @@
 		<class>net.nan21.dnet.module.bd.domain.impl.attr.AttributeSetAttribute</class>
 		<class>net.nan21.dnet.module.bd.domain.impl.attr.AttributeSubSet</class>
 		<class>net.nan21.dnet.module.bd.domain.impl.attr.AttributeValue</class>
+		<class>net.nan21.dnet.module.bd.domain.impl.attr.LookupItem</class>
 		<class>net.nan21.dnet.module.bd.domain.impl.classification.Classification</class>
 		<class>net.nan21.dnet.module.bd.domain.impl.classification.ClassificationItem</class>
 		<class>net.nan21.dnet.module.bd.domain.impl.classification.ClassificationSystem</class>
@@ -37,7 +38,6 @@
 		<class>net.nan21.dnet.module.bd.domain.impl.geo.Country</class>
 		<class>net.nan21.dnet.module.bd.domain.impl.geo.Location</class>
 		<class>net.nan21.dnet.module.bd.domain.impl.geo.Region</class>
-		<class>net.nan21.dnet.module.bd.domain.impl.other.LookupItem</class>
 		<class>net.nan21.dnet.module.bd.domain.impl.other.TargetRule</class>
 		<class>net.nan21.dnet.module.bd.domain.impl.uom.Uom</class>
 		<class>net.nan21.dnet.module.bd.domain.impl.uom.UomConversion</class>
