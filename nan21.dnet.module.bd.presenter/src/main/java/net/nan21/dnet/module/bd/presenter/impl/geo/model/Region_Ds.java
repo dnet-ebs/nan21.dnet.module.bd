@@ -16,12 +16,15 @@ import net.nan21.dnet.module.bd.domain.impl.geo.Country;
 import net.nan21.dnet.module.bd.domain.impl.geo.Region;
 
 @Ds(entity = Region.class, sort = {@SortField(field = Region_Ds.f_code)})
-@RefLookups({@RefLookup(refId = Region_Ds.f_countryId, namedQuery = Country.NQ_FIND_BY_CODE, params = {@Param(name = "code", field = Region_Ds.f_country)})})
+@RefLookups({
+		@RefLookup(refId = Region_Ds.f_countryId, namedQuery = Country.NQ_FIND_BY_CODE, params = {@Param(name = "code", field = Region_Ds.f_country)}),
+		@RefLookup(refId = Region_Ds.f_countryId, namedQuery = Country.NQ_FIND_BY_ISO2, params = {@Param(name = "iso2", field = Region_Ds.f_countryIso2)})})
 public class Region_Ds extends AbstractTypeWithCodeDs<Region> {
 
 	public static final String f_iso = "iso";
 	public static final String f_countryId = "countryId";
 	public static final String f_country = "country";
+	public static final String f_countryIso2 = "countryIso2";
 
 	@DsField
 	private String iso;
@@ -31,6 +34,9 @@ public class Region_Ds extends AbstractTypeWithCodeDs<Region> {
 
 	@DsField(join = "left", path = "country.code")
 	private String country;
+
+	@DsField(join = "left", path = "country.iso2")
+	private String countryIso2;
 
 	public Region_Ds() {
 		super();
@@ -62,5 +68,13 @@ public class Region_Ds extends AbstractTypeWithCodeDs<Region> {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public String getCountryIso2() {
+		return this.countryIso2;
+	}
+
+	public void setCountryIso2(String countryIso2) {
+		this.countryIso2 = countryIso2;
 	}
 }

@@ -16,6 +16,7 @@ Ext.define(Dnet.ns.bd + "Region_Ds", {
 		{name:"iso", type:"string"},
 		{name:"countryId", type:"string"},
 		{name:"country", type:"string"},
+		{name:"countryIso2", type:"string"},
 		{name:"id", type:"string"},
 		{name:"code", type:"string"},
 		{name:"name", type:"string"},

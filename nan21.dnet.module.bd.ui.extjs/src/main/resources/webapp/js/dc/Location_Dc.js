@@ -52,11 +52,11 @@ Ext.define(Dnet.ns.bd + "Location_Dc$Filter" , {
 	}
 });
 
-/* ================= GRID: ListCtx ================= */
+/* ================= GRID: List ================= */
 
-Ext.define(Dnet.ns.bd + "Location_Dc$ListCtx" , {
+Ext.define(Dnet.ns.bd + "Location_Dc$List" , {
 	extend: "dnet.core.dc.view.AbstractDcvGrid",
-	alias: "widget.bd_Location_Dc$ListCtx",
+	alias: "widget.bd_Location_Dc$List",
 	_noImport_: true,
 
 	/**
@@ -77,15 +77,16 @@ Ext.define(Dnet.ns.bd + "Location_Dc$ListCtx" , {
 		.addBooleanColumn({ name:"mailing", dataIndex:"mailing", width:60})
 		.addBooleanColumn({ name:"shipping", dataIndex:"shipping", width:60})
 		.addBooleanColumn({ name:"active", dataIndex:"active", width:60})
+		.addTextColumn({ name:"targetRefid", dataIndex:"targetRefid", hidden:true, width:100})
 		.addDefaults();
 	}
 });
 
-/* ================= EDIT FORM: EditCtx ================= */
+/* ================= EDIT FORM: Edit ================= */
 
-Ext.define(Dnet.ns.bd + "Location_Dc$EditCtx" , {
+Ext.define(Dnet.ns.bd + "Location_Dc$Edit" , {
 	extend: "dnet.core.dc.view.AbstractDcvEditForm",
-	alias: "widget.bd_Location_Dc$EditCtx",
+	alias: "widget.bd_Location_Dc$Edit",
 
 	/**
 	 * Components definition

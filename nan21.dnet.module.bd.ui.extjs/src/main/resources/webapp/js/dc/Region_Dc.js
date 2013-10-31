@@ -63,9 +63,10 @@ Ext.define(Dnet.ns.bd + "Region_Dc$List" , {
 		.addTextColumn({ name:"code", dataIndex:"code", width:120})
 		.addTextColumn({ name:"name", dataIndex:"name", width:200})
 		.addTextColumn({ name:"iso", dataIndex:"iso", width:50})
-		.addTextColumn({ name:"country", dataIndex:"country", width:120})
-		.addBooleanColumn({ name:"active", dataIndex:"active"})
 		.addTextColumn({ name:"countryId", dataIndex:"countryId", hidden:true, width:100})
+		.addTextColumn({ name:"country", dataIndex:"country", width:120})
+		.addTextColumn({ name:"countryIso2", dataIndex:"countryIso2", hidden:true, width:50})
+		.addBooleanColumn({ name:"active", dataIndex:"active"})
 		.addDefaults();
 	}
 });
@@ -108,12 +109,13 @@ Ext.define(Dnet.ns.bd + "Region_Dc$EditList" , {
 		.addTextColumn({name:"code", dataIndex:"code", width:120, caseRestriction:"uppercase"})
 		.addTextColumn({name:"name", dataIndex:"name", width:200})
 		.addTextColumn({name:"iso", dataIndex:"iso", width:50, maxLength:32, caseRestriction:"uppercase"})
+		.addTextColumn({name:"countryId", dataIndex:"countryId", hidden:true, width:100, noEdit: true})
 		.addLov({name:"country", dataIndex:"country", xtype:"gridcolumn", width:120, 
 			editor:{xtype:"bd_Countries_Lov", selectOnFocus:true, caseRestriction:"uppercase",
 				retFieldMapping: [{lovField:"id", dsField: "countryId"} ],
 				filterFieldMapping: [{lovField:"active", value: "true"} ]}})
+		.addTextColumn({name:"countryIso2", dataIndex:"countryIso2", hidden:true, width:50, maxLength:2, caseRestriction:"uppercase", noEdit: true})
 		.addBooleanColumn({name:"active", dataIndex:"active"})
-		.addTextColumn({name:"countryId", dataIndex:"countryId", hidden:true, width:100, noEdit: true})
 		.addDefaults();
 	}
 });

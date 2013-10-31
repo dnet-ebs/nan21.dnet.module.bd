@@ -22,7 +22,7 @@ Ext.define(Dnet.ns.bd + "Location_Ui" , {
 	_defineElements_: function() {
 		this._getBuilder_()
 		.addDcFilterFormView("location", {name:"locationFilter", xtype:"bd_Location_Dc$Filter"})
-		.addDcGridView("location", {name:"locationListCtx", xtype:"bd_Location_Dc$ListCtx"})
+		.addDcGridView("location", {name:"locationListCtx", xtype:"bd_Location_Dc$List"})
 		.addPanel({name:"main", layout:"border", defaults:{split:true}});
 	},
 	
