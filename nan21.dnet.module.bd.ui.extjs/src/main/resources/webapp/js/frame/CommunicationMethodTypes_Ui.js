@@ -24,7 +24,7 @@ Ext.define(Dnet.ns.bd + "CommunicationMethodTypes_Ui" , {
 	 */
 	_defineElements_: function() {
 		this._getBuilder_()
-		.addDcFilterFormView("ctype", {name:"ctypeFilter", height:80, xtype:"bd_CommunicationMethodType_Dc$Filter"})
+		.addDcFilterFormView("ctype", {name:"ctypeFilter", xtype:"bd_CommunicationMethodType_Dc$Filter"})
 		.addDcEditGridView("ctype", {name:"ctypeEditList", xtype:"bd_CommunicationMethodType_Dc$EditList", frame:true})
 		.addDcEditGridView("targetRule", {name:"targetRuleList", height:240, xtype:"bd_TargetRule_Dc$EditList", frame:true})
 		.addPanel({name:"main", layout:"border", defaults:{split:true}});
