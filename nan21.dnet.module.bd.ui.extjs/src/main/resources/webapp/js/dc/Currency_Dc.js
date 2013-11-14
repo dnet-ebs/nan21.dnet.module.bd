@@ -59,7 +59,7 @@ Ext.define(Dnet.ns.bd + "Currency_Dc$EditList" , {
 		.addTextColumn({name:"code", dataIndex:"code", width:120, caseRestriction:"uppercase"})
 		.addTextColumn({name:"name", dataIndex:"name", width:200})
 		.addTextColumn({name:"iso3", dataIndex:"iso3", width:50, maxLength:3, caseRestriction:"uppercase"})
-		.addNumberColumn({name:"standardPrecision", dataIndex:"standardPrecision", hidden:true, align:"right" })
+		.addNumberColumn({name:"standardPrecision", dataIndex:"standardPrecision", align:"right" })
 		.addTextColumn({name:"symbol", dataIndex:"symbol", hidden:true, width:60})
 		.addTextColumn({name:"description", dataIndex:"description", hidden:true, width:200})
 		.addBooleanColumn({name:"active", dataIndex:"active"})

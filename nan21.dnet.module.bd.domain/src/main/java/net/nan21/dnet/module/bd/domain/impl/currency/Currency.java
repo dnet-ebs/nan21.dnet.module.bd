@@ -13,9 +13,11 @@ import javax.persistence.PrePersist;
 import javax.persistence.QueryHint;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
 import net.nan21.dnet.core.domain.impl.AbstractTypeWithCode;
 import org.eclipse.persistence.config.HintValues;
 import org.eclipse.persistence.config.QueryHints;
+import org.hibernate.validator.constraints.NotBlank;
 
 /** Currencies definition  */
 @NamedQueries({
@@ -41,13 +43,15 @@ public class Currency extends AbstractTypeWithCode {
 	 */
 	public static final String NQ_FIND_BY_NAME = "Currency.findByName";
 
-	@Column(name = "ISO3", length = 3)
+	@NotBlank
+	@Column(name = "ISO3", nullable = false, length = 3)
 	private String iso3;
 
 	@Column(name = "SYMBOL", length = 255)
 	private String symbol;
 
-	@Column(name = "STANDARDPRECISION", precision = 1)
+	@NotNull
+	@Column(name = "STANDARDPRECISION", nullable = false, precision = 1)
 	private Integer standardPrecision;
 
 	public String getIso3() {

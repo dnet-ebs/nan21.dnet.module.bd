@@ -25,7 +25,9 @@
 			<column name="ID" type="varchar(64)">
 				<constraints nullable="false"/>
 			</column>
-			<column name="ISO3" type="varchar(3)"/>
+			<column name="ISO3" type="varchar(3)">
+				<constraints nullable="false"/>
+			</column>
 			<column name="MODIFIEDAT" type="datetime">
 				<constraints nullable="false"/>
 			</column>
@@ -39,7 +41,9 @@
 			<column name="REFID" type="varchar(64)">
 				<constraints nullable="false"/>
 			</column>
-			<column name="STANDARDPRECISION" type="int(1)"/>
+			<column name="STANDARDPRECISION" type="int(1)">
+				<constraints nullable="false"/>
+			</column>
 			<column name="SYMBOL" type="varchar(255)"/>
 			<column name="VERSION" type="bigint(10)"/>
 		</createTable>
